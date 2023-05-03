@@ -1,2 +1,2 @@
-[rohan-aakash]
-192.168.80.255 ansible_user=aakash
+[aakash]
+192.168.80.128 ansible_user=aakash
