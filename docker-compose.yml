@@ -30,7 +30,7 @@ services:
       - mysql-service
 
   frontend-app:
-    image: rohanarora11/frontend-app:v3
+    image: rohanarora11/frontend-app:v10
     container_name: frontend-app
     restart: always
     networks:
