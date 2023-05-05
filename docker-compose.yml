@@ -12,10 +12,10 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /home/aakash/Documents/Final_proj/majorProject-backend/docker-compose.yml/mysql-data:/var/lib/mysql
+      - /home/aakash/Documents/Final_proj/mysql-data:/var/lib/mysql
 
   backend-app:
-    image: "backend-app"
+    image: rohanarora11/backend-app
     container_name: backend-app
     restart: always
     networks:
@@ -30,7 +30,7 @@ services:
       - mysql-service
 
   frontend-app:
-    image: "rohanarora11/frontend-app"
+    image: rohanarora11/frontend-app
     container_name: frontend-app
     restart: always
     networks:
