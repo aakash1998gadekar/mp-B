@@ -4,16 +4,23 @@
   vars:
     ansible_python_interpreter: /usr/bin/python3
   tasks:
-    - name: Pull Docker Image
-      docker_image:
-        name: rohanarora11/backend-app
-        tag: latest
-        source: pull
+    - name: Start docker service
+    service:
+      name: docker
+      state: started
+        
+    - name: deploy
+      shell: docker compose up -d
+    # - name: Pull Docker Image
+    #   docker_image:
+    #     name: rohanarora11/backend-app
+    #     tag: latest
+    #     source: pull
 
-    - name: Create & Start Docker Container
-      docker_container:
-        name: backend-app
-        image: rohanarora11/backend-app
-        state: started
-        tty: yes
-        interactive: yes
+    # - name: Create & Start Docker Container
+    #   docker_container:
+    #     name: backend-app
+    #     image: rohanarora11/backend-app
+    #     state: started
+    #     tty: yes
+    #     interactive: yes
