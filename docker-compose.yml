@@ -15,7 +15,7 @@ services:
       - /home/aakash/Documents/Final_proj/mysql-data:/var/lib/mysql
 
   backend-app:
-    image: rohanarora11/backend-app:v2
+    image: rohanarora11/backend-app
     container_name: backend-app
     restart: always
     networks:
